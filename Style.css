@@ -1,0 +1,37 @@
+html, body {
+  margin: 0; padding: 0; height: 100%; background: #000; color: #ddd; font-family: sans-serif;
+}
+#overlay {
+  position: absolute; inset: 0; pointer-events: none;
+}
+#menu {
+  pointer-events: auto; position: absolute; top: 10px; left: 10px; width: calc(100% - 20px);
+}
+h1, h2 { margin: 8px 0; color: #eaeaea; }
+input, button { padding: 8px; margin: 4px; background: #111; color: #eee; border: 1px solid #333; border-radius: 4px; }
+button { cursor: pointer; }
+.panel { background: rgba(10,10,10,0.7); padding: 8px; border: 1px solid #333; border-radius: 6px; }
+.hidden { display: none; }
+
+#game {
+  width: 100vw; height: 100vh; display: block;
+  background: radial-gradient(ellipse at center, #0a0a0a 0%, #000 70%);
+}
+
+#hud { position: absolute; top: 8px; right: 8px; pointer-events: none; text-align: right; }
+#hud div { margin: 4px 0; background: rgba(0,0,0,0.5); padding: 6px 8px; border: 1px solid #333; border-radius: 4px; }
+
+#playersList { margin: 8px 0; }
+.row { display: flex; flex-wrap: wrap; align-items: center; }
+
+#chatBox { margin-top: 8px; }
+#chatMessages { max-height: 150px; overflow: auto; background: rgba(0,0,0,0.5); padding: 6px; border: 1px solid #333; }
+#chatMessages .msg { margin: 4px 0; font-size: 0.9em; }
+#chatMessages .name { color: #9fceff; }
+
+#touchControls { position: absolute; bottom: 12px; left: 12px; right: 12px; display: flex; justify-content: space-between; align-items: center; }
+#joystick { width: 120px; height: 120px; border-radius: 60px; background: rgba(255,255,255,0.05); border: 1px solid #333; position: relative; }
+#stick { width: 48px; height: 48px; border-radius: 24px; background: rgba(255,255,255,0.15); position: absolute; top: 36px; left: 36px; }
+#attackBtn, #taskBtn { background: #300; border-color: #600; }
+#attackBtn { margin-left: auto; }
+#taskBtn { margin-left: 8px; }

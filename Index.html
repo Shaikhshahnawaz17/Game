@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Multiplayer Horror</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Three.js CDN -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <!-- Simple audio will be loaded by JS -->
+</head>
+<body>
+  <div id="overlay">
+    <div id="menu">
+      <h1>Multiplayer Horror</h1>
+      <label>Name</label>
+      <input id="playerName" placeholder="Your name">
+      <div class="row">
+        <button id="createRoomBtn">Create room</button>
+        <input id="roomIdInput" placeholder="Room ID">
+        <button id="joinRoomBtn">Join room</button>
+      </div>
+      <div id="lobby" class="panel hidden">
+        <h2>Lobby</h2>
+        <div id="lobbyInfo"></div>
+        <div id="playersList"></div>
+        <div class="row">
+          <button id="readyBtn">Ready</button>
+          <button id="startBtn">Start game</button>
+        </div>
+        <div id="chatBox">
+          <div id="chatMessages"></div>
+          <div class="row">
+            <input id="chatInput" placeholder="Type a message">
+            <button id="chatSend">Send</button>
+          </div>
+        </div>
+      </div>
+      <div id="hud" class="hidden">
+        <div id="role"></div>
+        <div id="health"></div>
+        <div id="objective"></div>
+        <div id="roomIdDisplay"></div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <!-- Mobile controls -->
+  <div id="touchControls" class="hidden">
+    <div id="joystick">
+      <div id="stick"></div>
+    </div>
+    <button id="attackBtn">Attack</button>
+    <button id="taskBtn">Task</button>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/net.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

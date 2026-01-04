@@ -1,0 +1,14 @@
+{
+  "name": "horror-mp-game-server",
+  "version": "1.0.0",
+  "description": "WebSocket server for 3D multiplayer horror game",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.16.0",
+    "uuid": "^9.0.1"
+  }
+}
